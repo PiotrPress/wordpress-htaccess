@@ -1,0 +1,16 @@
+{
+  "name": "piotrpress/wordpress-htaccess",
+  "type": "composer-plugin",
+  "license": "MIT",
+  "description": "This is a webroot directory .htaccess file for setup, in which WordPress is installed in a wp-core directory and wp-content directory is moved outside a core directory.",
+  "homepage": "https://github.com/PiotrPress/wordpress-htaccess",
+  "authors": [
+    {
+      "name": "Piotr Niewiadomski",
+      "homepage": "https://piotr.press"
+    }
+  ],
+  "keywords": [
+    "wordpress", "htaccess", ".htaccess", "wordpress-core", "wp-core", "wp-content", "wp-admin", "composer", "apache", "modrewrite"
+  ]
+}
