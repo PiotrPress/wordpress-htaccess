@@ -10,7 +10,7 @@ This is a webroot directory `.htaccess` file for setup, in which WordPress is in
     "piotrpress/wordpress-htaccess": "^1.0"
   },
   "scripts": {
-    "post-update-cmd": "cp vendor/piotrpress/wordpress-htaccess/res/.htaccess ./.htaccess"
+    "post-update-cmd": "cp -r vendor/piotrpress/wordpress-htaccess/res/* ./"
   }
 }
 ```
