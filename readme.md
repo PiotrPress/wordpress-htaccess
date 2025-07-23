@@ -7,10 +7,13 @@ This is a webroot directory `.htaccess` file for setup, in which WordPress is in
 ```json
 {
   "require": {
-    "piotrpress/wordpress-htaccess": "^1.1"
+    "piotrpress/wordpress-htaccess": "^1.0"
   },
   "scripts": {
-    "post-update-cmd": "cp -r vendor/piotrpress/wordpress-htaccess/res/* ./"
+    "post-update-cmd": [
+      "cp vendor/piotrpress/wordpress-htaccess/res/.htaccess .htaccess",
+      "cp vendor/piotrpress/wordpress-htaccess/res/wp-core/.htaccess wp-core/.htaccess"
+    ]
   }
 }
 ```
