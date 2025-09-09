@@ -1,11 +1,16 @@
-<FilesMatch "^(license\.txt|readme\.html|wp-blog-header\.php|wp-comments-post\.php|wp-config-sample\.php|wp-links-opml\.php|wp-load\.php|wp-mail\.php|wp-settings\.php|wp-signup\.php|wp-trackback\.php|xmlrpc\.php)$">
+<FilesMatch "\.(txt|log)$">
     Order allow,deny
     Deny From all
 </FilesMatch>
 
-<FilesMatch "\.(txt|log)$">
+<FilesMatch "^(readme\.html|wp-blog-header\.php|wp-comments-post\.php|wp-config-sample\.php|wp-links-opml\.php|wp-load\.php|wp-mail\.php|wp-settings\.php|wp-signup\.php|wp-trackback\.php|xmlrpc\.php)$">
     Order allow,deny
     Deny From all
+</FilesMatch>
+
+<FilesMatch "^(robots\.txt|security\.txt|llms\.txt)$">
+    Order allow,deny
+    Allow From all
 </FilesMatch>
 
 <IfModule mod_rewrite.c>
