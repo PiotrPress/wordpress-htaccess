@@ -15,7 +15,7 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^\. - [F,L]
+    RewriteRule ^\.(?!well-known/) - [F,L]
 </IfModule>
 
 <IfModule mod_rewrite.c>
