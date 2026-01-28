@@ -1,3 +1,7 @@
+<IfModule mod_alias.c>
+    RedirectMatch 403 (?i)^/(?!\.well-known/).*/\.
+</IfModule>
+
 <FilesMatch "\.(txt|log)$">
     Order allow,deny
     Deny From all
@@ -15,11 +19,6 @@
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^\.(?!well-known/) - [F,L]
-</IfModule>
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
     RewriteBase /
     RewriteRule ^wp-admin/includes/ - [F,L]
     RewriteRule !^wp-includes/ - [S=4]
@@ -28,15 +27,3 @@
     RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
     RewriteRule ^wp-includes/theme-compat/ - [F,L]
 </IfModule>
-
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.php [L]
-</IfModule>
-# END WordPress

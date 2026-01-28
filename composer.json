@@ -2,7 +2,7 @@
   "name": "piotrpress/wordpress-htaccess",
   "type": "library",
   "license": "MIT",
-  "description": "This is a webroot directory .htaccess file for setup, in which WordPress is installed in a wp-core directory and wp-content directory is moved outside a core directory.",
+  "description": "This is .htaccess files for setup, in which WordPress is installed in a wp-core directory and wp-content directory is moved outside a core directory.",
   "homepage": "https://github.com/PiotrPress/wordpress-htaccess",
   "authors": [
     {
